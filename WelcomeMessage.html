@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container .box{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        #input{
+            width: 300px;
+            height: 60px;
+            color: black;
+            text-align: center;
+            font-size: xx-large;
+        }
+        #btn{
+            width: 100px;
+            height: 50px;
+            color: black;
+            border: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <input type="text" id="input"><br><br>
+            <button id="btn">Click Here</button>
+            <h1 id="name"></h1>
+
+        </div>
+    </div>
+
+    <script>
+       var btn =document.getElementById("btn")
+       btn.addEventListener('click',function() {
+           var input = document.getElementById('input').value;
+           var name = document.getElementById('name');
+           if(input == ""){
+            name.innerHTML= `Please Enter Your Name.`;
+           }
+           else{
+            name.innerHTML= `Welcome ${input.toLowerCase()} ! How are you?`;
+
+           }
+           
+           
+       });
+    </script>
+</body>
+</html>
